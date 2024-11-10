@@ -18,7 +18,7 @@ import { Label } from "@/components/ui/label"
 import { Button } from '@/components/ui/button'
 
 
-function page() {
+function Page() {
     const router = useRouter()
     const [value, setValue] = useState("")
     const [fromCoordinates, setFromCoordinates] = useState(null)
@@ -135,4 +135,4 @@ function page() {
     )
 }
 
-export default page
+export default Page

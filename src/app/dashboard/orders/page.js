@@ -14,7 +14,7 @@ import { Badge } from "@/components/ui/badge"
 import { databases } from '@/appwrite/appwrite'
 
 
-function page() {
+function Orders() {
     const [data, setData] = useState(null)
     useEffect(() => {
         (async () => {
@@ -82,4 +82,4 @@ function page() {
     )
 }
 
-export default page
+export default Orders
