@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import { databases } from '@/appwrite/appwrite'
 import { getUser } from '@/appwrite/auth'
-import { Geocoder } from '@mapbox/search-js-react'
+import dynamic from 'next/dynamic'
+const GeoWrapper = dynamic(() => import('./GeoWrapper'), { ssr: false });
 import { ID } from 'appwrite'
 import { redirect, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -16,7 +17,6 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from '@/components/ui/button'
-
 
 function Page() {
     const router = useRouter()
@@ -98,7 +98,7 @@ function Page() {
                         <div className="grid gap-4">
                             <div className="grid gap-2">
                                 <Label htmlFor="">From</Label>
-                                <Geocoder
+                                <GeoWrapper
                                     options={{
                                         proximity: {
                                             lng: -122.431297,
@@ -113,7 +113,7 @@ function Page() {
                                 <div className="flex items-center">
                                     <Label htmlFor="">To</Label>
                                 </div>
-                                <Geocoder
+                                <GeoWrapper
                                     options={{
                                         proximity: {
                                             lng: -122.431297,
