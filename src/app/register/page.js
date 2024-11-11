@@ -41,7 +41,7 @@ export function RegisterForm() {
         }
     }
     if (user){
-        return redirect("/dashbaord")
+        return redirect("/dashboard")
     }
   return (
    <div className="min-h-screen flex justify-center items-center bg-purple-950" style={{background: "url('register.jpg')", backgroundPosition: "center", backgroundSize: "cover"}}>
