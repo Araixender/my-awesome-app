@@ -44,7 +44,7 @@ export function LoginForm() {
         }
     }
     if (user){
-        return redirect("/dashbaord")
+        return redirect("/dashboard")
     }
   return (
    <div className="min-h-screen flex justify-center items-center" style={{background: "url('login.jpg')", backgroundPosition: "center", backgroundSize: "cover"}}>
