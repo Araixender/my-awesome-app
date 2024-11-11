@@ -6,8 +6,8 @@ import { account, OAuthProvider } from './appwrite'
 export const loginWithGoogle = async () => {
   try {
     await account.createOAuth2Session(OAuthProvider.Google, 
-        `${NEXT_PUBLIC_URL}/dashboard`, 
-        `${NEXT_PUBLIC_URL}`)
+        `${process.env.NEXT_PUBLIC_URL}/dashboard`, 
+        `${process.env.NEXT_PUBLIC_URL}`)
   } catch (error) {
     console.error(error)
   }
